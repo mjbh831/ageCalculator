@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import MonthInput from './MonthInput';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+	constructor() {
+		super();
+		this.state = {
+			monthInput: ''
+		}
+	}
+
+	selectedMonth = (event) => {
+		this.setState({monthInput: event.target.value})
+	} 
+
+	
+
+
+	render() {
+
+		let month = this.state.monthInput;
+		
+		return (
+			<div>
+				<h1>How old are YOU?</h1>
+				<h2>Enter your DOB:</h2>
+				<MonthInput monthSelected = {this.selectedMonth}/>
+				<h3>Your birthday month is {month}.</h3>
+			</div>
+		);
+	}
 }
 
 export default App;
