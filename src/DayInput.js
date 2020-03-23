@@ -2,7 +2,6 @@ import React from 'react';
 
 const DayInput = ({daySelected, month}) => {
 
-	// const months31 = ['january', 'march', 'may', 'july', 'august', 'october', 'december'];
 	const months30 = ['april', 'june', 'september', 'november'];
 	const feb = 'February';
 
