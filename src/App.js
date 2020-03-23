@@ -33,12 +33,16 @@ class App extends Component {
 			<div className='tc'>
 				<h1>How old are YOU?</h1>
 				<h2>Enter your DOB:</h2>
-				<MonthInput monthSelected= {this.selectedMonth}/>
-				<h3>Your birthday month is {this.state.monthInput}.</h3>
-				<DayInput daySelected= {this.selectedDay} month= {this.state.monthInput} />
-				<h3>You were born on day number {this.state.dayInput}.</h3>
-				<YearInput yearSelected= {this.selectedYear}/>
-				<h3>You were born in year {this.state.yearInput}.</h3>
+				<div className= 'pa1'>
+					<MonthInput monthSelected= {this.selectedMonth}/>
+				</div>
+				<div className= 'pa1'>
+					<DayInput daySelected= {this.selectedDay} month= {this.state.monthInput} />
+				</div>
+				<div className= 'pa1'>
+					<YearInput yearSelected= {this.selectedYear}/>
+				</div>
+				
 				<h2 className='pa5'><BdayDisplay month= {this.state.monthInput} day= {this.state.dayInput} year= {this.state.yearInput}/></h2>
 			</div>
 		);

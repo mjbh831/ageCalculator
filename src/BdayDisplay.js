@@ -1,13 +1,28 @@
 import React from 'react';
+import { format, formatDistance, formatRelative, subDays, differenceInYears } from 'date-fns';
+
 
 const BdayDisplay = ({month, day, year}) => {
 
-	const moment = require('moment');
-	
-		return (
-			<div>
-			{moment().fromNow()}
-			</div>
+
+let result = differenceInYears(					// calculate age using date-fns function
+		new Date(),
+		new Date(year, month, day)
+	);
+
+const displayMessage = () => {					// make sure each selection box has valid user input
+	if (month !== '' && month !== '0' 
+		&& day !== '' && day !== '0'
+		&& year !== '' && year !== '0') 
+		{
+			return <div>You were bornt {result} years ago.</div>
+	}
+}
+
+		return (								// display message
+
+			<div>{displayMessage()}</div>
+			
 		);
 }
 

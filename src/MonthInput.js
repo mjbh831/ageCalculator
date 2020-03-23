@@ -2,7 +2,7 @@ import React from 'react';
 
 const MonthInput = ({monthSelected}) => {
 
-	const month = [ 
+	const months = [ 
 		'Select one',
 		'January', 
 		'February', 
@@ -22,7 +22,7 @@ const MonthInput = ({monthSelected}) => {
 		<div>
 			<label htmlFor="month"> Month: </label>
 			<select name="month" required onChange={monthSelected}>
-				{month.map( (month, i) => <option key={i} value={month}>{month}</option>)}
+				{months.map( (month, i) => <option key={i} value={i}>{month}</option>)}
 			</select>
 		</div>
 	);
