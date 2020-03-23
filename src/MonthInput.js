@@ -3,6 +3,7 @@ import React from 'react';
 const MonthInput = ({monthSelected}) => {
 
 	const month = [ 
+		'Select one',
 		'January', 
 		'February', 
 		'March', 
