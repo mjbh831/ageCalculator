@@ -1,5 +1,5 @@
 import React from 'react';
-import { format, formatDistance, formatRelative, subDays, differenceInYears } from 'date-fns';
+import { differenceInYears } from 'date-fns';
 
 
 const BdayDisplay = ({month, day, year}) => {
@@ -15,7 +15,7 @@ const displayMessage = () => {					// make sure each selection box has valid use
 		&& day !== '' && day !== '0'
 		&& year !== '' && year !== '0') 
 		{
-			return <div>You were bornt {result} years ago.</div>
+			return <div>You were born {result} years ago.</div>
 	}
 }
 

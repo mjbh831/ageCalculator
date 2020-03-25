@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/*$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: 220px;
+$select-height: 40px; */
+
+select{
+	width: 220px;
+	height: 40px;
+}
+
+select:hover {
+	
+}

@@ -3,7 +3,7 @@ import React from 'react';
 const MonthInput = ({monthSelected}) => {
 
 	const months = [ 
-		'Select one',
+		'--Month--',
 		'January', 
 		'February', 
 		'March', 
@@ -20,7 +20,6 @@ const MonthInput = ({monthSelected}) => {
 
 	return (
 		<div>
-			<label htmlFor="month"> Month: </label>
 			<select name="month" required onChange={monthSelected}>
 				{months.map( (month, i) => <option key={i} value={i}>{month}</option>)}
 			</select>

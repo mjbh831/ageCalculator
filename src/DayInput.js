@@ -6,7 +6,7 @@ const DayInput = ({daySelected, month}) => {
 	const feb = 'February';
 
 	let days = [...Array(32).keys()];
-	days[0] = "Select one"
+	days[0] = "--Day--"
 	
 
 	if ( months30.includes(month.toLowerCase()) ) {
@@ -18,7 +18,6 @@ const DayInput = ({daySelected, month}) => {
 
 	return (
 		<div>
-			<label htmlFor="day"> Day: </label>
 			<select name="day" required onChange={daySelected}>
 				{days.map( (day, i) => <option key={i} value={day}>{day}</option>)}
 			</select>

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+#box{
+	display: flex;
+	flex-direction: column;
+	height: 450px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#inputs{
+	display: flex;
+}
